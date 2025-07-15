@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ethers } from 'ethers';
+import { BrowserProvider } from 'ethers';
 
 function App(){
   const [account, setAccount] = useState(null);
