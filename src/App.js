@@ -6,7 +6,7 @@ function App(){
 
   async function connectWallet() {
     if (window.ethereum) {
-      const provider = new ethers.providers.web3Provider(window.ethereum);
+      const provider = new BrowserProvider(window.ethereum);
       await provider.send('eth_requestAccounts', []);
       const signer = provider.getSigner();
       const address = await signer.getAddress();
